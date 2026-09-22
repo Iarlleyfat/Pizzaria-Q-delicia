@@ -7,361 +7,197 @@
 
     <title>Pizzaria Q-Delícia | Juazeiro do Norte</title>
 
-    <meta
-        name="description"
-        content="Pizzaria Q-Delícia em Novo Juazeiro. Pizza, esfihas, lanches, doces e muito mais. Todos os dias das 16h às 23h30."
-    >
+    <meta name="description"
+        content="Pizzaria Q-Delícia em Novo Juazeiro. Pizza, esfihas, hambúrgueres, lanches e muito mais.">
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* BANNER COM A FOTO DA FACHADA */
+        .hero {
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.90) 0%,
+                    rgba(0, 0, 0, 0.72) 40%,
+                    rgba(0, 0, 0, 0.35) 70%,
+                    rgba(0, 0, 0, 0.25) 100%
+                ),
+                url("fachada.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* CELULAR */
+        @media (max-width: 768px) {
+            .hero {
+                background-position: center;
+
+                background-image:
+                    linear-gradient(
+                        180deg,
+                        rgba(0, 0, 0, 0.60) 0%,
+                        rgba(0, 0, 0, 0.82) 55%,
+                        rgba(0, 0, 0, 0.95) 100%
+                    ),
+                    url("fachada.jpg");
+            }
+        }
+    </style>
 </head>
 
-
-<body class="bg-white text-gray-900">
-
-
-<!-- =====================================================
-     CABEÇALHO
-===================================================== -->
-
-<header class="bg-black text-white sticky top-0 z-50 shadow-lg">
-
-    <div class="max-w-6xl mx-auto px-5 py-3
-                flex items-center justify-between">
-
-        <!-- LOGO -->
-        <a href="#" class="flex items-center">
-
-            <span class="text-2x1 font-bold">
-                Pizzaria Q-delicia
-            </span>
-
-        </a>
+<body class="bg-black text-white">
 
 
-        <!-- BOTÃO PEDIR -->
-        <a
-            href="https://wa.me/558835871790"
-            target="_blank"
-            class="bg-red-600 hover:bg-red-700
-                   px-5 py-3 rounded-full
-                   font-black transition shadow-lg"
-        >
-            PEDIR AGORA 🍕
-        </a>
+    <!-- ==================================
+         CABEÇALHO FIXO
+    =================================== -->
 
-    </div>
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-black/95 backdrop-blur-md border-b border-white/10">
 
-</header>
+        <div
+            class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
 
+            <!-- LOGO -->
+            <a href="#inicio"
+                class="text-xl md:text-2xl font-extrabold">
 
+                🍕
+                <span class="text-white">
+                    Pizzaria
+                </span>
 
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section
-    class="relative min-h-[680px] flex items-center
-           overflow-hidden bg-black"
->
-
-    <!-- FOTO DA FACHADA -->
-    <img
-        src="espaco.jpg"
-        alt="Pizzaria Q-Delícia em Juazeiro do Norte"
-        class="absolute inset-0 w-full h-full object-cover"
-    >
-
-
-    <!-- ESCURECIMENTO -->
-    <div class="absolute inset-0 bg-black/65"></div>
-
-
-    <!-- CONTEÚDO -->
-    <div
-        class="relative z-10 max-w-6xl mx-auto
-               px-5 py-20 w-full"
-    >
-
-        <div class="max-w-3xl">
-
-
-            <div
-                class="inline-block bg-red-600
-                       text-white px-4 py-2
-                       rounded-full font-black
-                       text-sm mb-6"
-            >
-                🍕 PIZZARIA Q-DELÍCIA
-            </div>
-
-
-            <h1
-                class="text-white text-5xl md:text-7xl
-                       font-black leading-[0.95] mb-7"
-            >
-                A DELÍCIA DA CIDADE
                 <span class="text-red-500">
-                    ESTÁ AQUI.
+                    Q-Delícia
                 </span>
-            </h1>
+
+            </a>
 
 
-            <p
-                class="text-gray-200 text-xl
-                       md:text-2xl leading-relaxed
-                       max-w-2xl mb-9"
-            >
-                Pizza quentinha, esfihas, hambúrgueres
-                e aquele lanche caprichado para matar
-                a fome de verdade.
-            </p>
+            <!-- MENU DESKTOP -->
+            <nav class="hidden md:flex items-center gap-8">
 
-
-            <!-- BOTÕES -->
-            <div
-                class="flex flex-col sm:flex-row gap-4"
-            >
-
-                <a
-                    href="https://wa.me/558835871790"
-                    target="_blank"
-                    class="bg-red-600 hover:bg-red-700
-                           text-white text-center
-                           px-8 py-4 rounded-full
-                           font-black text-lg
-                           shadow-xl transition
-                           hover:-translate-y-1"
-                >
-                    🍕 FAZER MEU PEDIDO
+                <a href="#inicio"
+                    class="font-semibold hover:text-red-500 transition">
+                    Início
                 </a>
 
-
-                <a
-                    href="#cardapio"
-                    class="border-2 border-white
-                           hover:bg-white
-                           hover:text-black
-                           text-white text-center
-                           px-8 py-4 rounded-full
-                           font-bold text-lg transition"
-                >
-                    VER CARDÁPIO
+                <a href="#cardapio"
+                    class="font-semibold hover:text-red-500 transition">
+                    Cardápio
                 </a>
 
-            </div>
+                <a href="#sobre"
+                    class="font-semibold hover:text-red-500 transition">
+                    Sobre nós
+                </a>
+
+                <a href="#contato"
+                    class="font-semibold hover:text-red-500 transition">
+                    Contato
+                </a>
+
+            </nav>
 
 
-            <!-- INFORMAÇÕES -->
-            <div
-                class="mt-9 flex flex-col gap-3
-                       text-gray-200 text-base
-                       md:text-lg"
-            >
+            <!-- BOTÃO PEDIR AGORA -->
+            <a
+                href="https://wa.me/558896563971"
+                target="_blank"
+                class="bg-red-600 hover:bg-red-700 px-5 py-3 rounded-full font-bold transition">
 
-                <div>
-                    📍 Av. Presidente Castelo Branco, 3400
-                </div>
+                PEDIR AGORA 🍕
 
-                <div>
-                    📍 Novo Juazeiro — Juazeiro do Norte/CE
-                </div>
-
-                <div>
-                    🕓 Todos os dias • 16h às 23h30
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PROBLEMA
-===================================================== -->
-
-<section class="py-20 bg-white">
-
-    <div class="max-w-5xl mx-auto px-5">
-
-        <div class="text-center">
-
-            <span
-                class="text-red-600 font-black
-                       uppercase tracking-wide"
-            >
-                Bateu aquela fome?
-            </span>
-
-
-            <h2
-                class="text-4xl md:text-5xl
-                       font-black mt-3 mb-8"
-            >
-                Você não quer cozinhar.
-                <br>
-                Quer comer bem.
-            </h2>
+            </a>
 
         </div>
 
+    </header>
 
-        <div
-            class="grid md:grid-cols-3
-                   gap-6 mt-12"
-        >
 
-            <div
-                class="bg-gray-100 p-7
-                       rounded-2xl"
-            >
-                <div class="text-4xl mb-4">
-                    😩
-                </div>
 
-                <h3 class="font-black text-xl mb-2">
-                    Fome bateu
-                </h3>
+    <!-- ==================================
+         BANNER PRINCIPAL
+    =================================== -->
 
-                <p class="text-gray-600">
-                    E ninguém merece ficar horas pensando
-                    no que vai comer.
-                </p>
-            </div>
+    <main id="inicio">
 
+        <section
+            class="hero min-h-screen flex items-center pt-24">
 
             <div
-                class="bg-gray-100 p-7
-                       rounded-2xl"
-            >
-                <div class="text-4xl mb-4">
-                    🍕
-                </div>
+                class="max-w-7xl mx-auto w-full px-6 py-20">
 
-                <h3 class="font-black text-xl mb-2">
-                    Vontade de comer bem
-                </h3>
-
-                <p class="text-gray-600">
-                    Pizza, esfiha, lanche, doce...
-                    tem opção para escolher.
-                </p>
-            </div>
+                <div class="max-w-3xl">
 
 
-            <div
-                class="bg-gray-100 p-7
-                       rounded-2xl"
-            >
-                <div class="text-4xl mb-4">
-                    📱
-                </div>
+                    <!-- IDENTIFICAÇÃO -->
+                    <div
+                        class="inline-block bg-red-600 px-5 py-2 rounded-full mb-6">
 
-                <h3 class="font-black text-xl mb-2">
-                    Quer praticidade
-                </h3>
+                        <span class="font-bold">
+                            🍕 PIZZARIA Q-DELÍCIA
+                        </span>
 
-                <p class="text-gray-600">
-                    Faça seu pedido e resolva a fome
-                    sem complicação.
-                </p>
-            </div>
-
-        </div>
+                    </div>
 
 
-        <div class="text-center mt-12">
+                    <!-- TÍTULO -->
+                    <h1
+                        class="text-5xl md:text-7xl font-black leading-tight mb-6">
 
-            <p
-                class="text-2xl md:text-3xl
-                       font-black"
-            >
-                É por isso que existe a
-                <span class="text-red-600">
-                    Q-Delícia.
-                </span>
-            </p>
+                        A DELÍCIA DA
+                        <br>
 
-        </div>
+                        CIDADE
 
-    </div>
+                        <span class="text-red-500">
+                            ESTÁ AQUI.
+                        </span>
 
-</section>
+                    </h1>
 
 
+                    <!-- DESCRIÇÃO -->
+                    <p
+                        class="text-xl md:text-2xl text-gray-200 leading-relaxed mb-8 max-w-2xl">
 
-<!-- =====================================================
-     CARDÁPIO
-===================================================== -->
+                        Pizza quentinha, esfihas,
+                        hambúrgueres e aquele lanche
+                        caprichado para matar a fome
+                        de verdade.
 
-<section
-    id="cardapio"
-    class="py-20 bg-gray-100"
->
-
-    <div class="max-w-6xl mx-auto px-5">
-
-
-        <div class="text-center mb-12">
-
-            <span
-                class="text-red-600 font-black
-                       uppercase"
-            >
-                Tem opção para todo gosto
-            </span>
-
-            <h2
-                class="text-4xl md:text-5xl
-                       font-black mt-3"
-            >
-                O que você vai pedir hoje?
-            </h2>
-
-        </div>
+                    </p>
 
 
-        <div
-            class="grid sm:grid-cols-2
-                   lg:grid-cols-4 gap-6"
-        >
+                    <!-- BOTÕES -->
+                    <div
+                        class="flex flex-col sm:flex-row gap-4">
 
-            <!-- PIZZA -->
-            <div
-                class="bg-white rounded-2xl
-                       p-7 shadow-sm
-                       hover:shadow-lg
-                       transition"
-            >
+                        <!-- FAZER MEU PEDIDO -->
+                        <a
+                            href="https://wa.me/558896563971"
+                            target="_blank"
+                            class="bg-red-600 hover:bg-red-700 text-white text-lg font-bold px-8 py-4 rounded-full text-center transition">
 
-                <div class="text-5xl mb-5">
-                    🍕
-                </div>
+                            🍕 FAZER MEU PEDIDO
 
-                <h3
-                    class="text-2xl font-black mb-3"
-                >
-                    Pizzas
-                </h3>
-
-                <p class="text-gray-600">
-                    Calabresa, chocolate e várias
-                    opções para dividir.
-                </p>
-
-            </div>
+                        </a>
 
 
-            <!-- ESFIHA -->
-            <div
-                class="bg-white rounded-2xl
-                       p-7 shadow-sm
-                       hover:shadow-lg
-                       transition"
-            >
+                        <!-- CARDÁPIO -->
+                        <a
+                            href="#cardapio”
 
-                <div class="text-5xl
