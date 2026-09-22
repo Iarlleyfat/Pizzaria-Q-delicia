@@ -20,14 +20,16 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        /* BANNER */
+        /* =========================
+           BANNER PRINCIPAL
+        ========================= */
 
         .hero {
-            height: 680px;
+            min-height: 760px;
 
             background-image:
                 linear-gradient(
-                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.48),
                     rgba(0,0,0,0.88)
                 ),
                 url("fachada.jpg");
@@ -35,16 +37,160 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+            display: flex;
+            align-items: center;
         }
 
-        /* CELULAR */
+
+        /* =========================
+           TÍTULO DO BANNER
+        ========================= */
+
+        .hero-title {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-weight: 900;
+
+            color: #ff1616;
+
+            text-shadow:
+                3px 3px 0 #8b0000,
+                5px 5px 8px rgba(0,0,0,0.8);
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================
+           SUBTÍTULO
+        ========================= */
+
+        .hero-subtitle {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-weight: 700;
+
+            color: white;
+
+            text-transform: uppercase;
+
+            text-shadow:
+                2px 2px 4px rgba(0,0,0,0.9);
+        }
+
+
+        /* =========================
+           INFORMAÇÕES
+        ========================= */
+
+        .info-line {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: white;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 18px;
+
+            line-height: 1.5;
+
+            margin-bottom: 7px;
+        }
+
+
+        .info-icon {
+            width: 28px;
+            min-width: 28px;
+
+            text-align: center;
+
+            font-size: 21px;
+        }
+
+
+        .closed {
+            color: #ff2222;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           BOTÕES
+        ========================= */
+
+        .btn-order {
+            background: #ff1717;
+
+            transition: 0.25s;
+
+            box-shadow:
+                0 5px 15px rgba(255,0,0,0.25);
+        }
+
+        .btn-order:hover {
+            background: #d90000;
+
+            transform: translateY(-2px);
+        }
+
+
+        .btn-menu {
+            border: 2px solid white;
+
+            transition: 0.25s;
+        }
+
+        .btn-menu:hover {
+            background: white;
+
+            color: black;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 768px) {
 
             .hero {
-                height: 820px;
+                min-height: 800px;
 
                 background-position: center;
+            }
+
+
+            .hero-title {
+                font-size: 42px;
+
+                line-height: 0.98;
+            }
+
+
+            .hero-subtitle {
+                font-size: 17px;
+
+                line-height: 1.25;
+            }
+
+
+            .info-line {
+                font-size: 16px;
+
+                gap: 8px;
+            }
+
+
+            .info-icon {
+                font-size: 19px;
+
+                width: 25px;
+
+                min-width: 25px;
             }
 
         }
@@ -79,21 +225,29 @@
         </a>
 
 
-        <nav class="hidden md:flex gap-8">
+        <nav class="hidden md:flex gap-8 font-semibold">
 
-            <a href="#inicio">
+            <a
+                href="#inicio"
+                class="hover:text-red-500 transition">
                 Início
             </a>
 
-            <a href="#cardapio">
+            <a
+                href="#cardapio"
+                class="hover:text-red-500 transition">
                 Cardápio
             </a>
 
-            <a href="#sobre">
+            <a
+                href="#sobre"
+                class="hover:text-red-500 transition">
                 Sobre nós
             </a>
 
-            <a href="#contato">
+            <a
+                href="#contato"
+                class="hover:text-red-500 transition">
                 Contato
             </a>
 
@@ -103,7 +257,7 @@
         <a
             href="https://wa.me/558896563971"
             target="_blank"
-            class="bg-red-600 px-5 py-3 rounded-full font-bold">
+            class="bg-red-600 hover:bg-red-700 px-5 py-3 rounded-full font-bold transition">
 
             PEDIR AGORA 🍕
 
@@ -116,69 +270,83 @@
 
 
 <!-- =========================
-     BANNER
+     NOVO BANNER
 ========================= -->
 
 <section
     id="inicio"
-    class="hero flex items-center pt-24">
+    class="hero pt-24">
 
     <div
         class="max-w-7xl mx-auto px-6 w-full">
 
-        <div class="max-w-3xl">
+        <div class="max-w-5xl">
 
 
-            <div
-                class="inline-block bg-red-600 px-5 py-3 rounded-full mb-6 font-bold">
-
-                🍕 PIZZARIA Q-DELÍCIA
-
-            </div>
-
+            <!-- TÍTULO -->
 
             <h1
-                class="text-4xl md:text-7xl font-black leading-tight mb-6">
+                class="hero-title text-5xl md:text-7xl lg:text-8xl mb-5">
 
                 A DELÍCIA DA
                 <br>
 
-                CIDADE
-
-                <span class="text-red-500">
-                    ESTÁ AQUI.
-                </span>
+                CIDADE ESTÁ AQUI!
 
             </h1>
 
 
-            <p
-                class="text-lg md:text-2xl text-gray-200 mb-8 max-w-2xl">
+            <!-- SUBTÍTULO -->
 
-                Pizza quentinha, esfihas,
-                hambúrgueres e aquele lanche
-                caprichado para matar a fome
-                de verdade.
+            <p
+                class="hero-subtitle text-base md:text-xl lg:text-2xl max-w-4xl mb-8">
+
+                PIZZA QUENTINHA, ESFIHAS, HAMBÚRGUERES E
+                <br class="hidden md:block">
+
+                AQUELE LANCHE CAPRICHADO PARA MATAR A
+                <br class="hidden md:block">
+
+                FOME DE VERDADE.
 
             </p>
 
 
+            <!-- BOTÕES -->
+
             <div
-                class="flex flex-col sm:flex-row gap-4">
+                class="flex flex-col md:flex-row gap-4 max-w-3xl">
+
 
                 <a
                     href="https://wa.me/558896563971"
                     target="_blank"
-                    class="bg-red-600 px-8 py-4 rounded-full text-center font-bold text-lg">
 
-                    🍕 FAZER MEU PEDIDO
+                    class="btn-order
+                           px-8
+                           py-5
+                           rounded-full
+                           text-center
+                           font-black
+                           text-lg
+                           md:text-xl">
+
+                    🍕 &nbsp; FAZER MEU PEDIDO
 
                 </a>
 
 
                 <a
                     href="#cardapio"
-                    class="border-2 border-white px-8 py-4 rounded-full text-center font-bold text-lg">
+
+                    class="btn-menu
+                           px-8
+                           py-5
+                           rounded-full
+                           text-center
+                           font-black
+                           text-lg
+                           md:text-xl">
 
                     VER CARDÁPIO
 
@@ -187,23 +355,70 @@
             </div>
 
 
-            <div class="mt-8 text-gray-200">
+            <!-- INFORMAÇÕES -->
 
-                <p>
-                    📍 Av. Presidente Castelo Branco, 3400
-                </p>
+            <div
+                class="mt-8">
 
-                <p>
-                    📍 Novo Juazeiro — Juazeiro do Norte/CE
-                </p>
 
-                <p>
-                    🕐 Quinta a terça • 16h às 23h30
-                </p>
+                <!-- ENDEREÇO -->
 
-                <p class="text-red-400 font-bold mt-2">
-                    🔴 Quarta-feira • FECHADO
-                </p>
+                <div class="info-line">
+
+                    <span class="info-icon">
+                        📍
+                    </span>
+
+                    <span>
+                        Av. Presidente Castelo Branco, 3400
+                    </span>
+
+                </div>
+
+
+                <!-- BAIRRO -->
+
+                <div class="info-line">
+
+                    <span class="info-icon">
+                        📍
+                    </span>
+
+                    <span>
+                        Novo Juazeiro — Juazeiro do Norte/CE
+                    </span>
+
+                </div>
+
+
+                <!-- HORÁRIO -->
+
+                <div class="info-line">
+
+                    <span class="info-icon">
+                        🕐
+                    </span>
+
+                    <span>
+                        Quinta a terça • 16h às 23h30
+                    </span>
+
+                </div>
+
+
+                <!-- FECHADO -->
+
+                <div class="info-line closed">
+
+                    <span class="info-icon">
+                        🔴
+                    </span>
+
+                    <span>
+                        Quarta-feira • FECHADO
+                    </span>
+
+                </div>
 
             </div>
 
@@ -226,11 +441,19 @@
     <div
         class="max-w-7xl mx-auto px-6">
 
-        <div class="text-center mb-12">
 
-            <p class="text-red-600 font-bold text-lg">
+        <!-- TÍTULO -->
+
+        <div
+            class="text-center mb-12">
+
+            <p
+                class="text-red-600 font-bold text-lg">
+
                 🍕 NOSSO CARDÁPIO
+
             </p>
+
 
             <h2
                 class="text-4xl md:text-5xl font-black mt-2">
@@ -238,6 +461,7 @@
                 BATEU AQUELA FOME?
 
             </h2>
+
 
             <p
                 class="text-gray-600 text-lg mt-4">
@@ -249,6 +473,9 @@
         </div>
 
 
+
+        <!-- PRODUTOS -->
+
         <div
             class="grid md:grid-cols-3 gap-6">
 
@@ -256,11 +483,16 @@
             <!-- PIZZA -->
 
             <div
-                class="bg-gray-100 rounded-2xl p-8 text-center">
+                class="bg-gray-100 rounded-2xl p-8 text-center
+                       hover:shadow-xl transition">
 
-                <div class="text-6xl mb-4">
+                <div
+                    class="text-6xl mb-4">
+
                     🍕
+
                 </div>
+
 
                 <h3
                     class="text-2xl font-black mb-3">
@@ -269,7 +501,9 @@
 
                 </h3>
 
-                <p class="text-gray-600">
+
+                <p
+                    class="text-gray-600">
 
                     Pizzas quentinhas e deliciosas
                     preparadas especialmente para você.
@@ -279,14 +513,20 @@
             </div>
 
 
+
             <!-- HAMBÚRGUER -->
 
             <div
-                class="bg-gray-100 rounded-2xl p-8 text-center">
+                class="bg-gray-100 rounded-2xl p-8 text-center
+                       hover:shadow-xl transition">
 
-                <div class="text-6xl mb-4">
+                <div
+                    class="text-6xl mb-4">
+
                     🍔
+
                 </div>
+
 
                 <h3
                     class="text-2xl font-black mb-3">
@@ -295,7 +535,9 @@
 
                 </h3>
 
-                <p class="text-gray-600">
+
+                <p
+                    class="text-gray-600">
 
                     Hambúrgueres caprichados
                     para matar aquela fome.
@@ -305,14 +547,20 @@
             </div>
 
 
+
             <!-- ESFIHA -->
 
             <div
-                class="bg-gray-100 rounded-2xl p-8 text-center">
+                class="bg-gray-100 rounded-2xl p-8 text-center
+                       hover:shadow-xl transition">
 
-                <div class="text-6xl mb-4">
+                <div
+                    class="text-6xl mb-4">
+
                     🥙
+
                 </div>
+
 
                 <h3
                     class="text-2xl font-black mb-3">
@@ -321,7 +569,9 @@
 
                 </h3>
 
-                <p class="text-gray-600">
+
+                <p
+                    class="text-gray-600">
 
                     Esfihas deliciosas para
                     acompanhar seu pedido.
@@ -348,6 +598,7 @@
 
     <div
         class="max-w-5xl mx-auto px-6 text-center">
+
 
         <p
             class="text-red-500 font-bold text-lg">
@@ -391,6 +642,7 @@
     <div
         class="max-w-4xl mx-auto px-6 text-center">
 
+
         <h2
             class="text-4xl md:text-5xl font-black mb-5">
 
@@ -399,7 +651,8 @@
         </h2>
 
 
-        <p class="text-xl mb-8">
+        <p
+            class="text-xl mb-8">
 
             Faça seu pedido agora!
 
@@ -409,7 +662,16 @@
         <a
             href="https://wa.me/558896563971"
             target="_blank"
-            class="inline-block bg-black px-10 py-5 rounded-full text-xl font-black">
+
+            class="inline-block
+                   bg-black
+                   px-10
+                   py-5
+                   rounded-full
+                   text-xl
+                   font-black
+                   hover:bg-gray-900
+                   transition">
 
             🍕 PEDIR AGORA
 
