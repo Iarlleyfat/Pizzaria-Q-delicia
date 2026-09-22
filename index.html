@@ -22,15 +22,17 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        /* BANNER COM A FOTO DA FACHADA */
+        /* =========================
+           BANNER
+        ========================= */
+
         .hero {
             background-image:
                 linear-gradient(
                     90deg,
-                    rgba(0, 0, 0, 0.90) 0%,
-                    rgba(0, 0, 0, 0.72) 40%,
-                    rgba(0, 0, 0, 0.35) 70%,
-                    rgba(0, 0, 0, 0.25) 100%
+                    rgba(0, 0, 0, 0.88) 0%,
+                    rgba(0, 0, 0, 0.68) 45%,
+                    rgba(0, 0, 0, 0.30) 100%
                 ),
                 url("fachada.jpg");
 
@@ -39,165 +41,36 @@
             background-repeat: no-repeat;
         }
 
-        /* CELULAR */
-        @media (max-width: 768px) {
-            .hero {
-                background-position: center;
+        /* =========================
+           CELULAR
+        ========================= */
 
+        @media (max-width: 768px) {
+
+            .hero {
                 background-image:
                     linear-gradient(
                         180deg,
-                        rgba(0, 0, 0, 0.60) 0%,
-                        rgba(0, 0, 0, 0.82) 55%,
+                        rgba(0, 0, 0, 0.55) 0%,
+                        rgba(0, 0, 0, 0.78) 55%,
                         rgba(0, 0, 0, 0.95) 100%
                     ),
                     url("fachada.jpg");
+
+                background-position: center;
             }
         }
     </style>
+
 </head>
+
 
 <body class="bg-black text-white">
 
 
-    <!-- ==================================
-         CABEÇALHO FIXO
-    =================================== -->
+    <!-- =====================================
+         CABEÇALHO
+    ====================================== -->
 
     <header
-        class="fixed top-0 left-0 w-full z-50 bg-black/95 backdrop-blur-md border-b border-white/10">
-
-        <div
-            class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
-
-            <!-- LOGO -->
-            <a href="#inicio"
-                class="text-xl md:text-2xl font-extrabold">
-
-                🍕
-                <span class="text-white">
-                    Pizzaria
-                </span>
-
-                <span class="text-red-500">
-                    Q-Delícia
-                </span>
-
-            </a>
-
-
-            <!-- MENU DESKTOP -->
-            <nav class="hidden md:flex items-center gap-8">
-
-                <a href="#inicio"
-                    class="font-semibold hover:text-red-500 transition">
-                    Início
-                </a>
-
-                <a href="#cardapio"
-                    class="font-semibold hover:text-red-500 transition">
-                    Cardápio
-                </a>
-
-                <a href="#sobre"
-                    class="font-semibold hover:text-red-500 transition">
-                    Sobre nós
-                </a>
-
-                <a href="#contato"
-                    class="font-semibold hover:text-red-500 transition">
-                    Contato
-                </a>
-
-            </nav>
-
-
-            <!-- BOTÃO PEDIR AGORA -->
-            <a
-                href="https://wa.me/558896563971"
-                target="_blank"
-                class="bg-red-600 hover:bg-red-700 px-5 py-3 rounded-full font-bold transition">
-
-                PEDIR AGORA 🍕
-
-            </a>
-
-        </div>
-
-    </header>
-
-
-
-    <!-- ==================================
-         BANNER PRINCIPAL
-    =================================== -->
-
-    <main id="inicio">
-
-        <section
-            class="hero min-h-screen flex items-center pt-24">
-
-            <div
-                class="max-w-7xl mx-auto w-full px-6 py-20">
-
-                <div class="max-w-3xl">
-
-
-                    <!-- IDENTIFICAÇÃO -->
-                    <div
-                        class="inline-block bg-red-600 px-5 py-2 rounded-full mb-6">
-
-                        <span class="font-bold">
-                            🍕 PIZZARIA Q-DELÍCIA
-                        </span>
-
-                    </div>
-
-
-                    <!-- TÍTULO -->
-                    <h1
-                        class="text-5xl md:text-7xl font-black leading-tight mb-6">
-
-                        A DELÍCIA DA
-                        <br>
-
-                        CIDADE
-
-                        <span class="text-red-500">
-                            ESTÁ AQUI.
-                        </span>
-
-                    </h1>
-
-
-                    <!-- DESCRIÇÃO -->
-                    <p
-                        class="text-xl md:text-2xl text-gray-200 leading-relaxed mb-8 max-w-2xl">
-
-                        Pizza quentinha, esfihas,
-                        hambúrgueres e aquele lanche
-                        caprichado para matar a fome
-                        de verdade.
-
-                    </p>
-
-
-                    <!-- BOTÕES -->
-                    <div
-                        class="flex flex-col sm:flex-row gap-4">
-
-                        <!-- FAZER MEU PEDIDO -->
-                        <a
-                            href="https://wa.me/558896563971"
-                            target="_blank"
-                            class="bg-red-600 hover:bg-red-700 text-white text-lg font-bold px-8 py-4 rounded-full text-center transition">
-
-                            🍕 FAZER MEU PEDIDO
-
-                        </a>
-
-
-                        <!-- CARDÁPIO -->
-                        <a
-                            href="#cardapio”
-
+        class="fixed top-0 left-0 w-full z-50 bg-black/95 backdrop
