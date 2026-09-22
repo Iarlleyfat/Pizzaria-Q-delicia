@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pizzaria Q-Delícia | Juazeiro do Norte</title>
-
-    <meta name="description"
-        content="Pizzaria Q-Delícia em Novo Juazeiro. Pizza, esfihas, hambúrgueres, lanches e muito mais.">
+    <title>Pizzaria Q-Delícia</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
+
         html {
             scroll-behavior: smooth;
         }
@@ -22,17 +20,15 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        /* =========================
-           BANNER
-        ========================= */
+        /* BANNER */
 
         .hero {
+            height: 680px;
+
             background-image:
                 linear-gradient(
-                    90deg,
-                    rgba(0, 0, 0, 0.88) 0%,
-                    rgba(0, 0, 0, 0.68) 45%,
-                    rgba(0, 0, 0, 0.30) 100%
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.88)
                 ),
                 url("fachada.jpg");
 
@@ -41,25 +37,18 @@
             background-repeat: no-repeat;
         }
 
-        /* =========================
-           CELULAR
-        ========================= */
+        /* CELULAR */
 
         @media (max-width: 768px) {
 
             .hero {
-                background-image:
-                    linear-gradient(
-                        180deg,
-                        rgba(0, 0, 0, 0.55) 0%,
-                        rgba(0, 0, 0, 0.78) 55%,
-                        rgba(0, 0, 0, 0.95) 100%
-                    ),
-                    url("fachada.jpg");
+                height: 820px;
 
                 background-position: center;
             }
+
         }
+
     </style>
 
 </head>
@@ -68,9 +57,388 @@
 <body class="bg-black text-white">
 
 
-    <!-- =====================================
-         CABEÇALHO
-    ====================================== -->
+<!-- =========================
+     CABEÇALHO
+========================= -->
 
-    <header
-        class="fixed top-0 left-0 w-full z-50 bg-black/95 backdrop
+<header
+    class="fixed top-0 left-0 w-full z-50 bg-black border-b border-white/10">
+
+    <div
+        class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between gap-3">
+
+        <a
+            href="#inicio"
+            class="text-lg md:text-2xl font-extrabold">
+
+            🍕 Pizzaria
+            <span class="text-red-500">
+                Q-Delícia
+            </span>
+
+        </a>
+
+
+        <nav class="hidden md:flex gap-8">
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#cardapio">
+                Cardápio
+            </a>
+
+            <a href="#sobre">
+                Sobre nós
+            </a>
+
+            <a href="#contato">
+                Contato
+            </a>
+
+        </nav>
+
+
+        <a
+            href="https://wa.me/558896563971"
+            target="_blank"
+            class="bg-red-600 px-5 py-3 rounded-full font-bold">
+
+            PEDIR AGORA 🍕
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     BANNER
+========================= -->
+
+<section
+    id="inicio"
+    class="hero flex items-center pt-24">
+
+    <div
+        class="max-w-7xl mx-auto px-6 w-full">
+
+        <div class="max-w-3xl">
+
+
+            <div
+                class="inline-block bg-red-600 px-5 py-3 rounded-full mb-6 font-bold">
+
+                🍕 PIZZARIA Q-DELÍCIA
+
+            </div>
+
+
+            <h1
+                class="text-4xl md:text-7xl font-black leading-tight mb-6">
+
+                A DELÍCIA DA
+                <br>
+
+                CIDADE
+
+                <span class="text-red-500">
+                    ESTÁ AQUI.
+                </span>
+
+            </h1>
+
+
+            <p
+                class="text-lg md:text-2xl text-gray-200 mb-8 max-w-2xl">
+
+                Pizza quentinha, esfihas,
+                hambúrgueres e aquele lanche
+                caprichado para matar a fome
+                de verdade.
+
+            </p>
+
+
+            <div
+                class="flex flex-col sm:flex-row gap-4">
+
+                <a
+                    href="https://wa.me/558896563971"
+                    target="_blank"
+                    class="bg-red-600 px-8 py-4 rounded-full text-center font-bold text-lg">
+
+                    🍕 FAZER MEU PEDIDO
+
+                </a>
+
+
+                <a
+                    href="#cardapio"
+                    class="border-2 border-white px-8 py-4 rounded-full text-center font-bold text-lg">
+
+                    VER CARDÁPIO
+
+                </a>
+
+            </div>
+
+
+            <div class="mt-8 text-gray-200">
+
+                <p>
+                    📍 Av. Presidente Castelo Branco, 3400
+                </p>
+
+                <p>
+                    📍 Novo Juazeiro — Juazeiro do Norte/CE
+                </p>
+
+                <p>
+                    🕐 Quinta a terça • 16h às 23h30
+                </p>
+
+                <p class="text-red-400 font-bold mt-2">
+                    🔴 Quarta-feira • FECHADO
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CARDÁPIO
+========================= -->
+
+<section
+    id="cardapio"
+    class="bg-white text-black py-20">
+
+    <div
+        class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-12">
+
+            <p class="text-red-600 font-bold text-lg">
+                🍕 NOSSO CARDÁPIO
+            </p>
+
+            <h2
+                class="text-4xl md:text-5xl font-black mt-2">
+
+                BATEU AQUELA FOME?
+
+            </h2>
+
+            <p
+                class="text-gray-600 text-lg mt-4">
+
+                Escolha seu favorito e faça seu pedido.
+
+            </p>
+
+        </div>
+
+
+        <div
+            class="grid md:grid-cols-3 gap-6">
+
+
+            <!-- PIZZA -->
+
+            <div
+                class="bg-gray-100 rounded-2xl p-8 text-center">
+
+                <div class="text-6xl mb-4">
+                    🍕
+                </div>
+
+                <h3
+                    class="text-2xl font-black mb-3">
+
+                    Pizzas
+
+                </h3>
+
+                <p class="text-gray-600">
+
+                    Pizzas quentinhas e deliciosas
+                    preparadas especialmente para você.
+
+                </p>
+
+            </div>
+
+
+            <!-- HAMBÚRGUER -->
+
+            <div
+                class="bg-gray-100 rounded-2xl p-8 text-center">
+
+                <div class="text-6xl mb-4">
+                    🍔
+                </div>
+
+                <h3
+                    class="text-2xl font-black mb-3">
+
+                    Hambúrgueres
+
+                </h3>
+
+                <p class="text-gray-600">
+
+                    Hambúrgueres caprichados
+                    para matar aquela fome.
+
+                </p>
+
+            </div>
+
+
+            <!-- ESFIHA -->
+
+            <div
+                class="bg-gray-100 rounded-2xl p-8 text-center">
+
+                <div class="text-6xl mb-4">
+                    🥙
+                </div>
+
+                <h3
+                    class="text-2xl font-black mb-3">
+
+                    Esfihas
+
+                </h3>
+
+                <p class="text-gray-600">
+
+                    Esfihas deliciosas para
+                    acompanhar seu pedido.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section
+    id="sobre"
+    class="bg-black py-20">
+
+    <div
+        class="max-w-5xl mx-auto px-6 text-center">
+
+        <p
+            class="text-red-500 font-bold text-lg">
+
+            ❤️ PIZZARIA Q-DELÍCIA
+
+        </p>
+
+
+        <h2
+            class="text-4xl md:text-5xl font-black mt-3 mb-6">
+
+            Feita para matar sua fome
+
+        </h2>
+
+
+        <p
+            class="text-gray-300 text-lg">
+
+            Sabor, qualidade e aquele lanche
+            caprichado para você aproveitar
+            com a família e os amigos.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+
+<section
+    id="contato"
+    class="bg-red-600 py-20">
+
+    <div
+        class="max-w-4xl mx-auto px-6 text-center">
+
+        <h2
+            class="text-4xl md:text-5xl font-black mb-5">
+
+            FICOU COM FOME?
+
+        </h2>
+
+
+        <p class="text-xl mb-8">
+
+            Faça seu pedido agora!
+
+        </p>
+
+
+        <a
+            href="https://wa.me/558896563971"
+            target="_blank"
+            class="inline-block bg-black px-10 py-5 rounded-full text-xl font-black">
+
+            🍕 PEDIR AGORA
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer
+    class="bg-black text-gray-400 py-8 text-center">
+
+    <p>
+        © 2026 Pizzaria Q-Delícia
+    </p>
+
+    <p class="mt-2">
+        Juazeiro do Norte — CE
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
