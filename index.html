@@ -29,37 +29,205 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 76px;
+      height: 75px;
       background: #000;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 6%;
-      z-index: 1000;
-      box-shadow: 0 2px 12px rgba(0,0,0,.25);
+      padding: 0 5%;
+      z-index: 999;
+      box-shadow: 0 3px 15px rgba(0,0,0,.3);
     }
 
     .logo {
       color: white;
-      font-size: 21px;
-      font-weight: 800;
       text-decoration: none;
+      font-size: 21px;
+      font-weight: bold;
       white-space: nowrap;
     }
 
     .logo span {
-      color: #e52323;
+      color: #e50914;
     }
 
     nav {
+      display: flex;
+      gap: 30px;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      display: flex;
-      gap: 32px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: #e50914;
+    }
+
+    .pedido-topo {
+      background: #e50914;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .pedido-topo:hover {
+      background: #b8070f;
+      transform: scale(1.05);
+    }
+
+    /* =========================
+       BANNER
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      padding: 120px 20px 70px;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,.60),
+          rgba(0,0,0,.65)
+        ),
+        url("images/banner.jpg") center/cover no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 950px;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 7vw, 80px);
+      line-height: 1;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #e50914;
+      margin-top: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: 30px auto;
+      font-size: clamp(16px, 2vw, 21px);
+      line-height: 1.6;
+      font-weight: bold;
+    }
+
+    .botoes {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .botao {
+      display: inline-block;
+      padding: 16px 30px;
+      border-radius: 35px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: .3s;
+    }
+
+    .botao-vermelho {
+      background: #e50914;
+      color: white;
+    }
+
+    .botao-preto {
+      background: #000;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .botao:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.4);
+    }
+
+    /* =========================
+       TÍTULOS
+    ========================= */
+
+    section {
+      padding: 90px 6%;
+    }
+
+    .titulo {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .titulo pequeno {
+      color: #e50914;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .titulo h2 {
+      font-size: clamp(32px, 5vw, 50px);
+      margin-top: 10px;
+      font-weight: 900;
+    }
+
+    .titulo p {
+      margin-top: 12px;
+      color: #666;
+      font-size: 18px;
+    }
+
+    /* =========================
+       CARDÁPIO
+    ========================= */
+
+    #cardapio {
+      background: #f5f5f5;
+    }
+
+    .cardapio {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,.12);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.18);
+    }
+
+    .card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      display
