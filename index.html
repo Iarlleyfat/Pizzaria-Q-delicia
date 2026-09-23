@@ -58,7 +58,7 @@
                 3px 3px 0 #8b0000,
                 5px 5px 8px rgba(0,0,0,0.8);
 
-            text-transform: uppercase;
+            text-transform: none;
         }
 
 
@@ -152,6 +152,29 @@
 
 
         /* =========================
+           BOTÕES DO CABEÇALHO
+        ========================= */
+
+        .header-btn {
+            background: white;
+            color: #c40000;
+
+            padding: 8px 16px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.25s;
+        }
+
+        .header-btn:hover {
+            background: #ffe5e5;
+            color: #a00000;
+        }
+
+
+        /* =========================
            MOBILE
         ========================= */
 
@@ -165,9 +188,9 @@
 
 
             .hero-title {
-                font-size: 42px;
+                font-size: 32px;
 
-                line-height: 0.98;
+                line-height: 1.1;
             }
 
 
@@ -208,60 +231,60 @@
 ========================= -->
 
 <header
-    class="fixed top-0 left-0 w-full z-50 bg-black border-b border-white/10">
+    class="fixed top-0 left-0 w-full z-50 bg-red-600 border-b border-red-700">
 
     <div
         class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between gap-3">
 
+        <!-- LOGO -->
         <a
             href="#inicio"
-            class="text-lg md:text-2xl font-extrabold">
+            class="text-lg md:text-2xl font-extrabold text-white">
 
             🍕 Pizzaria
-            <span class="text-red-500">
+            <span class="text-white">
                 Q-Delícia
             </span>
 
         </a>
 
 
-        <nav class="hidden md:flex gap-8 font-semibold">
+        <!-- MENU -->
+        <nav class="hidden md:flex gap-3 font-semibold">
 
             <a
                 href="#inicio"
-                class="hover:text-red-500 transition">
+                class="header-btn">
+
                 Início
+
             </a>
 
             <a
                 href="#cardapio"
-                class="hover:text-red-500 transition">
+                class="header-btn">
+
                 Cardápio
+
             </a>
 
             <a
                 href="#sobre"
-                class="hover:text-red-500 transition">
+                class="header-btn">
+
                 Sobre nós
+
             </a>
 
             <a
                 href="#contato"
-                class="hover:text-red-500 transition">
+                class="header-btn">
+
                 Contato
+
             </a>
 
         </nav>
-
-
-        <a
-            href="https://wa.me/558896563971"
-            target="_blank"
-            class="bg-red-600 hover:bg-red-700 px-5 py-3 rounded-full font-bold transition">
-
-            PEDIR AGORA 🍕
-
-        </a>
 
     </div>
 
@@ -270,7 +293,7 @@
 
 
 <!-- =========================
-     NOVO BANNER
+     BANNER
 ========================= -->
 
 <section
@@ -283,15 +306,12 @@
         <div class="max-w-5xl">
 
 
-            <!-- TÍTULO -->
+            <!-- TÍTULO ALTERADO -->
 
             <h1
-                class="hero-title text-5xl md:text-7xl lg:text-8xl mb-5">
+                class="hero-title text-3xl md:text-4xl lg:text-5xl mb-5">
 
-                A DELÍCIA DA
-                <br>
-
-                CIDADE ESTÁ AQUI!
+                Bem vindo à Pizzaria Q-delícia
 
             </h1>
 
@@ -329,378 +349,5 @@
                            text-center
                            font-black
                            text-lg
-                           md:text-xl">
-
-                    🍕 &nbsp; FAZER MEU PEDIDO
-
-                </a>
-
-
-                <a
-                    href="#cardapio"
-
-                    class="btn-menu
-                           px-8
-                           py-5
-                           rounded-full
-                           text-center
-                           font-black
-                           text-lg
-                           md:text-xl">
-
-                    VER CARDÁPIO
-
-                </a>
-
-            </div>
-
-
-            <!-- INFORMAÇÕES -->
-
-            <div
-                class="mt-8">
-
-
-                <!-- ENDEREÇO -->
-
-                <div class="info-line">
-
-                    <span class="info-icon">
-                        📍
-                    </span>
-
-                    <span>
-                        Av. Presidente Castelo Branco, 3400
-                    </span>
-
-                </div>
-
-
-                <!-- BAIRRO -->
-
-                <div class="info-line">
-
-                    <span class="info-icon">
-                        📍
-                    </span>
-
-                    <span>
-                        Novo Juazeiro — Juazeiro do Norte/CE
-                    </span>
-
-                </div>
-
-
-                <!-- HORÁRIO -->
-
-                <div class="info-line">
-
-                    <span class="info-icon">
-                        🕐
-                    </span>
-
-                    <span>
-                        Quinta a terça • 16h às 23h30
-                    </span>
-
-                </div>
-
-
-                <!-- FECHADO -->
-
-                <div class="info-line closed">
-
-                    <span class="info-icon">
-                        🔴
-                    </span>
-
-                    <span>
-                        Quarta-feira • FECHADO
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     CARDÁPIO
-========================= -->
-
-<section
-    id="cardapio"
-    class="bg-white text-black py-20">
-
-    <div
-        class="max-w-7xl mx-auto px-6">
-
-
-        <!-- TÍTULO -->
-
-        <div
-            class="text-center mb-12">
-
-            <p
-                class="text-red-600 font-bold text-lg">
-
-                🍕 NOSSO CARDÁPIO
-
-            </p>
-
-
-            <h2
-                class="text-4xl md:text-5xl font-black mt-2">
-
-                BATEU AQUELA FOME?
-
-            </h2>
-
-
-            <p
-                class="text-gray-600 text-lg mt-4">
-
-                Escolha seu favorito e faça seu pedido.
-
-            </p>
-
-        </div>
-
-
-
-        <!-- PRODUTOS -->
-
-        <div
-            class="grid md:grid-cols-3 gap-6">
-
-
-            <!-- PIZZA -->
-
-            <div
-                class="bg-gray-100 rounded-2xl p-8 text-center
-                       hover:shadow-xl transition">
-
-                <div
-                    class="text-6xl mb-4">
-
-                    🍕
-
-                </div>
-
-
-                <h3
-                    class="text-2xl font-black mb-3">
-
-                    Pizzas
-
-                </h3>
-
-
-                <p
-                    class="text-gray-600">
-
-                    Pizzas quentinhas e deliciosas
-                    preparadas especialmente para você.
-
-                </p>
-
-            </div>
-
-
-
-            <!-- HAMBÚRGUER -->
-
-            <div
-                class="bg-gray-100 rounded-2xl p-8 text-center
-                       hover:shadow-xl transition">
-
-                <div
-                    class="text-6xl mb-4">
-
-                    🍔
-
-                </div>
-
-
-                <h3
-                    class="text-2xl font-black mb-3">
-
-                    Hambúrgueres
-
-                </h3>
-
-
-                <p
-                    class="text-gray-600">
-
-                    Hambúrgueres caprichados
-                    para matar aquela fome.
-
-                </p>
-
-            </div>
-
-
-
-            <!-- ESFIHA -->
-
-            <div
-                class="bg-gray-100 rounded-2xl p-8 text-center
-                       hover:shadow-xl transition">
-
-                <div
-                    class="text-6xl mb-4">
-
-                    🥙
-
-                </div>
-
-
-                <h3
-                    class="text-2xl font-black mb-3">
-
-                    Esfihas
-
-                </h3>
-
-
-                <p
-                    class="text-gray-600">
-
-                    Esfihas deliciosas para
-                    acompanhar seu pedido.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     SOBRE
-========================= -->
-
-<section
-    id="sobre"
-    class="bg-black py-20">
-
-    <div
-        class="max-w-5xl mx-auto px-6 text-center">
-
-
-        <p
-            class="text-red-500 font-bold text-lg">
-
-            ❤️ PIZZARIA Q-DELÍCIA
-
-        </p>
-
-
-        <h2
-            class="text-4xl md:text-5xl font-black mt-3 mb-6">
-
-            Feita para matar sua fome
-
-        </h2>
-
-
-        <p
-            class="text-gray-300 text-lg">
-
-            Sabor, qualidade e aquele lanche
-            caprichado para você aproveitar
-            com a família e os amigos.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     CONTATO
-========================= -->
-
-<section
-    id="contato"
-    class="bg-red-600 py-20">
-
-    <div
-        class="max-w-4xl mx-auto px-6 text-center">
-
-
-        <h2
-            class="text-4xl md:text-5xl font-black mb-5">
-
-            FICOU COM FOME?
-
-        </h2>
-
-
-        <p
-            class="text-xl mb-8">
-
-            Faça seu pedido agora!
-
-        </p>
-
-
-        <a
-            href="https://wa.me/558896563971"
-            target="_blank"
-
-            class="inline-block
-                   bg-black
-                   px-10
-                   py-5
-                   rounded-full
-                   text-xl
-                   font-black
-                   hover:bg-gray-900
-                   transition">
-
-            🍕 PEDIR AGORA
-
-        </a>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     RODAPÉ
-========================= -->
-
-<footer
-    class="bg-black text-gray-400 py-8 text-center">
-
-    <p>
-        © 2026 Pizzaria Q-Delícia
-    </p>
-
-    <p class="mt-2">
-        Juazeiro do Norte — CE
-    </p>
-
-</footer>
-
-
-</body>
-
-</html>
+                           md
+v
