@@ -10,377 +10,118 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-
         html {
             scroll-behavior: smooth;
         }
 
         body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
         }
 
-        /* =========================
-           BANNER PRINCIPAL
-        ========================= */
-
-        .hero {
-            min-height: 760px;
-
-            background-image:
-                linear-gradient(
-                    rgba(0,0,0,0.48),
-                    rgba(0,0,0,0.88)
-                ),
-                url("fachada.jpg");
-
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-
-            display: flex;
-            align-items: center;
-        }
-
-
-        /* =========================
-           TÍTULO DO BANNER
-        ========================= */
-
-        .hero-title {
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-weight: 900;
-
-            color: #ff1616;
-
-            text-shadow:
-                3px 3px 0 #8b0000,
-                5px 5px 8px rgba(0,0,0,0.8);
-
-            text-transform: none;
-        }
-
-
-        /* =========================
-           NOME DA PIZZARIA
-        ========================= */
-
-        .pizzaria-name {
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-weight: 900;
-
-            color: white;
-
-            text-shadow:
-                2px 2px 5px rgba(0,0,0,0.9);
-        }
-
-
-        /* =========================
-           SUBTÍTULO
-        ========================= */
-
-        .hero-subtitle {
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-weight: 700;
-
-            color: white;
-
-            text-transform: uppercase;
-
-            text-shadow:
-                2px 2px 4px rgba(0,0,0,0.9);
-        }
-
-
-        /* =========================
-           INFORMAÇÕES
-        ========================= */
-
-        .info-line {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            color: white;
-
-            font-family: Arial, Helvetica, sans-serif;
-
-            font-size: 18px;
-
-            line-height: 1.5;
-
-            margin-bottom: 7px;
-        }
-
-
-        .info-icon {
-            width: 28px;
-            min-width: 28px;
-
-            text-align: center;
-
-            font-size: 21px;
-        }
-
-
-        .closed {
-            color: #ff2222;
-
-            font-weight: 700;
-        }
-
-
-        /* =========================
-           BOTÕES
-        ========================= */
-
-        .btn-order {
-            background: #ff1717;
-
-            transition: 0.25s;
-
-            box-shadow:
-                0 5px 15px rgba(255,0,0,0.25);
-        }
-
-        .btn-order:hover {
-            background: #d90000;
-
-            transform: translateY(-2px);
-        }
-
-
-        .btn-menu {
-            border: 2px solid white;
-
-            transition: 0.25s;
-        }
-
-        .btn-menu:hover {
-            background: white;
-
-            color: black;
-        }
-
-
-        /* =========================
-           MENU DO CABEÇALHO
-        ========================= */
-
+        /* CABEÇALHO */
         .header-btn {
             color: white;
-
             transition: 0.25s;
-
             font-weight: 600;
         }
 
         .header-btn:hover {
-            color: #ffd6d6;
+            opacity: 0.75;
         }
 
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 768px) {
-
-            .hero {
-                min-height: 800px;
-
-                background-position: center;
-            }
-
-
-            .hero-title {
-                font-size: 32px;
-
-                line-height: 1.1;
-            }
-
-
-            .pizzaria-name {
-                font-size: 24px;
-            }
-
-
-            .hero-subtitle {
-                font-size: 17px;
-
-                line-height: 1.25;
-            }
-
-
-            .info-line {
-                font-size: 16px;
-
-                gap: 8px;
-            }
-
-
-            .info-icon {
-                font-size: 19px;
-
-                width: 25px;
-
-                min-width: 25px;
-            }
-
+        /* HERO */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background-image: url("fachada.jpg");
+            background-size: cover;
+            background-position: center;
         }
 
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            color: #ef4444;
+            font-weight: 900;
+        }
+
+        .btn-order {
+            background: #dc2626;
+            color: white;
+            transition: 0.25s;
+        }
+
+        .btn-order:hover {
+            background: #b91c1c;
+            transform: scale(1.03);
+        }
+
+        .btn-menu {
+            background: white;
+            color: #dc2626;
+            transition: 0.25s;
+        }
+
+        .btn-menu:hover {
+            background: #f3f4f6;
+            transform: scale(1.03);
+        }
     </style>
-
 </head>
-
 
 <body class="bg-black text-white">
 
+    <!-- CABEÇALHO -->
+    <header class="fixed top-0 left-0 w-full bg-red-600 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 relative flex items-center justify-between">
 
-<!-- =========================
-     CABEÇALHO
-========================= -->
-
-<header
-    class="fixed top-0 left-0 w-full z-50 bg-red-600 border-b border-red-700">
-
-    <div
-        class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between gap-3 relative">
-
-
-        <!-- LOGO -->
-
-        <a
-            href="#inicio"
-            class="text-lg md:text-2xl font-extrabold text-white">
-
-            🍕 Pizzaria
-            <span class="text-white">
-                Q-Delícia
-            </span>
-
-        </a>
-
-
-        <!-- MENU CENTRALIZADO -->
-
-        <nav
-            class="hidden md:flex gap-8 font-semibold absolute left-1/2 transform -translate-x-1/2">
-
-            <a
-                href="#inicio"
-                class="header-btn">
-
-                Início
-
+            <!-- LOGO -->
+            <a href="#" class="text-2xl font-black">
+                🍕 Q-DELÍCIA
             </a>
 
+            <!-- MENU CENTRAL -->
+            <nav class="absolute left-1/2 transform -translate-x-1/2 flex gap-6">
+                <a href="#inicio" class="header-btn">
+                    Início
+                </a>
 
-            <a
-                href="#cardapio"
-                class="header-btn">
+                <a href="#cardapio" class="header-btn">
+                    Cardápio
+                </a>
 
-                Cardápio
+                <a href="#sobre" class="header-btn">
+                    Sobre
+                </a>
 
-            </a>
+                <a href="#contato" class="header-btn">
+                    Contato
+                </a>
+            </nav>
 
-
-            <a
-                href="#sobre"
-                class="header-btn">
-
-                Sobre nós
-
-            </a>
-
-
-            <a
-                href="#contato"
-                class="header-btn">
-
-                Contato
-
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
+        </div>
+    </header>
 
 
+    <!-- HERO -->
+    <section id="inicio" class="hero flex items-center justify-center pt-24">
 
-<!-- =========================
-     NOVO BANNER
-========================= -->
-
-<section
-    id="inicio"
-    class="hero pt-24">
-
-    <div
-        class="max-w-7xl mx-auto px-6 w-full">
-
-        <div class="max-w-5xl">
-
+        <div class="hero-content max-w-5xl mx-auto px-6 py-20 w-full">
 
             <!-- TÍTULO -->
-
-            <h1
-                class="hero-title text-3xl md:text-4xl lg:text-5xl mb-2">
-
+            <h1 class="hero-title text-3xl md:text-4xl lg:text-5xl mb-5">
                 Bem vindo à Pizzaria Q-delícia
-
             </h1>
 
-
-            <!-- NOME DA PIZZARIA -->
-
-            <h2
-                class="pizzaria-name text-2xl md:text-3xl mb-5">
-
-                Pizzaria Q-delícia
-
-            </h2>
-
-
             <!-- SUBTÍTULO -->
-
-            <p
-                class="hero-subtitle text-base md:text-xl lg:text-2xl max-w-4xl mb-8">
-
-                PIZZA QUENTINHA, ESFIHAS, HAMBÚRGUERES E
-                <br class="hidden md:block">
-
-                AQUELE LANCHE CAPRICHADO PARA MATAR A
-                <br class="hidden md:block">
-
-                FOME DE VERDADE.
-
-            </p>
-
-
-            <!-- BOTÕES -->
-
-            <div
-                class="flex flex-col md:flex-row gap-4 max-w-3xl">
-
-
-                <a
-                    href="https://wa.me/558896563971"
-                    target="_blank"
-
-                    class="btn-order
-                           px-8
-                           py-5
-                           rounded-full
-                           text-center
-                           font-black
-                           text-lg
-                           md:text-xl">
-
-                   
+            <p class="text-xl md:text-2xl font-bold
